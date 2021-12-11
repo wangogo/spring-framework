@@ -10,6 +10,7 @@ plugins {
 	id "io.spring.ge.conventions" version "0.0.7"
 }
 
+include 'app'
 include "spring-aop"
 include "spring-aspects"
 include "spring-beans"
@@ -35,6 +36,7 @@ include "spring-websocket"
 include "framework-bom"
 include "integration-tests"
 
+
 rootProject.name = "spring"
 rootProject.children.each {project ->
 	project.buildFileName = "${project.name}.gradle"
@@ -54,3 +56,5 @@ settings.gradle.projectsLoaded {
 		}
 	}
 }
+include 'app'
+
