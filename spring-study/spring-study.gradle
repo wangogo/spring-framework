@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'org.springframework'
+version '6.0.0-SNAPSHOT'
+
+//repositories {
+//    mavenCentral()
+//}
+
+dependencies {
+    optional(project(":spring-core"))
+    optional(project(":spring-beans"))
+    optional(project(":spring-context"))
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
